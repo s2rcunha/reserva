@@ -1,0 +1,16 @@
+{
+  "name": "SESCINC-C0 Gestão de Material",
+  "short_name": "SescincC0",
+  "description": "Sistema de Gerenciamento de Material Carga para o SESCINC-C0",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151619",
+  "theme_color": "#ea580c",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2850/2850406.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
