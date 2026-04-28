@@ -1,6 +1,10 @@
 {
   "name": "SESCINC-CO Gestão de Material",
+<<<<<<< HEAD
   "short_name": "SESCINC-CO",
+=======
+  "short_name": "RESERVA SESCINC-CO",
+>>>>>>> 91d3179bf78714e208f5eb5f186e79dfbadb8054
   "description": "Sistema de Gerenciamento de Material Carga e Equipamentos - SESCINC-CO",
   "start_url": "index.html",
   "display": "standalone",
