@@ -6,7 +6,7 @@
   "display": "standalone",
   "background_color": "#151619",
   "theme_color": "#dc2626",
-  "orientation": "portrait",
+  "orientation": "any",
   "icons": [
     {
       "src": "logo-unidade.png",
