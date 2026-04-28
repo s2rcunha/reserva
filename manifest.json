@@ -1,8 +1,8 @@
 {
   "name": "SESCINC-CO Gestão de Material",
-  "short_name": "SescincCO",
+  "short_name": "SESCINC-CO",
   "description": "Sistema de Gerenciamento de Material Carga e Equipamentos - SESCINC-CO",
-  "start_url": "/",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#151619",
   "theme_color": "#dc2626",
