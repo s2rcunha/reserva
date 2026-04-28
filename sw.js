@@ -1,12 +1,11 @@
 const CACHE_NAME = 'sescincco-v1';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/logo-unidade.png',
-  '/icon-192.png',
-  '/icon-512.png',
-  '/splash.png'
+  './',
+  './index.html',
+  './manifest.json',
+  './logo-unidade.png',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {

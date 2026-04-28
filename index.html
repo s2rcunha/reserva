@@ -5,30 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#dc2626" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="SescincCO" />
     <link rel="apple-touch-icon" href="icon-192.png" />
-    <link rel="apple-touch-startup-image" href="splash.png" />
     <title>SESCINC-CO - Gestão de Material Carga</title>
-    <style>
-      /* Bloqueio básico de seleção de texto para dificultar cópias acidentais */
-      body {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      /* Permitir seleção apenas em inputs e textareas */
-      input, textarea {
-        -webkit-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-        user-select: text;
-      }
-    </style>
-    <script type="module" crossorigin src="./assets/index-BD3byfd5.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dq56Kxr_.css">
+    <script type="module" crossorigin src="./assets/index-CZaeIACA.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwhDhE3_.css">
   </head>
   <body>
     <div id="root"></div>
@@ -40,20 +24,6 @@
             .catch(err => console.log('SW erro:', err));
         });
       }
-
-      // Prevenção básica de clique direito
-      document.addEventListener('contextmenu', event => event.preventDefault());
-      
-      // Prevenção básica de teclas de atalho de inspeção (F12, Ctrl+Shift+I, etc)
-      document.addEventListener('keydown', (e) => {
-        if (
-          e.key === 'F12' ||
-          (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
-          (e.ctrlKey && e.key === 'U')
-        ) {
-          e.preventDefault();
-        }
-      });
     </script>
   </body>
 </html>
