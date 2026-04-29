@@ -13,23 +13,14 @@
     <link rel="apple-touch-startup-image" href="splash.png" />
     <title>SESCINC-CO - Gestão de Material Carga</title>
     <style>
-      /* Bloqueio básico de seleção de texto para dificultar cópias acidentais */
+      /* Estilos globais básicos */
       body {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      /* Permitir seleção apenas em inputs e textareas */
-      input, textarea {
-        -webkit-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-        user-select: text;
+        margin: 0;
+        padding: 0;
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-C5Uj-jyU.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DQkXOMhg.css">
+    <script type="module" crossorigin src="./assets/index-BJkoE8ga.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-XEAqXRGa.css">
   </head>
   <body>
     <div id="root"></div>
@@ -41,20 +32,6 @@
             .catch(err => console.log('SW erro:', err));
         });
       }
-
-      // Prevenção básica de clique direito
-      document.addEventListener('contextmenu', event => event.preventDefault());
-      
-      // Prevenção básica de teclas de atalho de inspeção (F12, Ctrl+Shift+I, etc)
-      document.addEventListener('keydown', (e) => {
-        if (
-          e.key === 'F12' ||
-          (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
-          (e.ctrlKey && e.key === 'U')
-        ) {
-          e.preventDefault();
-        }
-      });
     </script>
   </body>
 </html>
