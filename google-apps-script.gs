@@ -549,9 +549,24 @@ function saveRow(sheetName, data, executor) {
 // Verifica se um BMP já existe em qualquer aba de materiais
 function isBmpDuplicate(bmp, currentId) {
   if (!bmp) return false;
-  var sBmp = String(bmp).trim();
-  if (sBmp === "") return false;
-  
+
+  var normalizeBmp = function(v) {
+    if (v === undefined || v === null) return '';
+    var s = String(v || '');
+    // Remove BOM and common invisible/no-break characters
+    s = s.replace(/\uFEFF/g, '');
+    s = s.replace(/[\u00A0\u200B\u200C\u200D\u2060]/g, '');
+    // Normalize unicode (if available) and remove all whitespace
+    if (String.prototype.normalize) {
+      try { s = s.normalize('NFKC'); } catch(e) {}
+    }
+    s = s.replace(/\s+/g, '');
+    return s.toUpperCase().trim();
+  };
+
+  var target = normalizeBmp(bmp);
+  if (target === '') return false;
+
   for (var s = 0; s < MATERIAL_SHEETS.length; s++) {
     var sheet = SS.getSheetByName(MATERIAL_SHEETS[s]);
     if (!sheet) continue;
@@ -560,9 +575,11 @@ function isBmpDuplicate(bmp, currentId) {
     var headers = data[0].map(function(h) { return String(h).trim().toLowerCase(); });
     var bmpIdx = headers.indexOf('bmp');
     if (bmpIdx === -1) continue;
-    
+
     for (var i = 1; i < data.length; i++) {
-      if (String(data[i][bmpIdx]).trim() === sBmp) {
+      var existing = normalizeBmp(data[i][bmpIdx]);
+      if (existing === '') continue;
+      if (existing === target) {
         if (!currentId || String(data[i][0]) !== String(currentId)) {
           return true;
         }
